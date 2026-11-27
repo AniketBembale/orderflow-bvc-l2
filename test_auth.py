@@ -86,7 +86,7 @@ def test_login_with_mocked_users_db():
 
        token = data["access_token"]
        protected_response = client.get("/products",headers = {"Authorization":f"Bearer {token}"})
-
+ 
        assert protected_response.status_code == 200
 
        
